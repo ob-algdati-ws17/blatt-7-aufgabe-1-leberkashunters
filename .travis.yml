@@ -1,2 +1,10 @@
 language: cpp
-script: make && make test
+
+before_script:
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make
+
+script:
+- make test
